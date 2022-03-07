@@ -26,7 +26,7 @@ def parse_command_line_arguments():
  
  
 def get_web_driver():
-    service = Service("C:\Program Files (x86)\chromedriver.exe")
+    service = Service("C:\Program Files (x86)\chromedriver.exe")                             # replace the path by your chromedriver path
     chrome_options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver_wait = WebDriverWait(driver, DELAY)
@@ -71,3 +71,5 @@ except TimeoutException as exc:
     print("Error: Trailer does not exist for this title")
 
     #https://www.netflix.com/in/browse/genre/839338 - browse the title links from here [ctrl+click]
+   
+   #instructions to run - pass "python <filename> --link <link of the title>"
